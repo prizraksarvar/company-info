@@ -35,7 +35,7 @@ CompaniesPage.propTypes = {
 
 };
 
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state, ownProps) => {
   return {
       companies: state.companies
     };

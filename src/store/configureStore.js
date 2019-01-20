@@ -3,7 +3,7 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/rootReducer';
 import watchLoadCompanies from '../sagas/companiesSaga';
 
-export default function configureStore() {
+const configureStore = () => {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
     rootReducer,
@@ -13,3 +13,5 @@ export default function configureStore() {
 
   return store;
 }
+
+export default configureStore;

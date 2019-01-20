@@ -79,10 +79,8 @@ CompanyForm = reduxForm({
   form: 'companyEditForm'
 })(CompanyForm);
 
-CompanyForm = connect(
-  state => ({
+CompanyForm = connect(state => ({
     initialValues: state.companyEditForm.data
-  })
-)(CompanyForm);
+}))(CompanyForm);
 
 export default CompanyForm;

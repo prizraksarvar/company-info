@@ -29,12 +29,12 @@ CompanyPage.propTypes = {
 
 };
 
-function getCompanyById(companies, id) {
+const getCompanyById = (companies, id) => {
   let company = companies.find(company => company.id == id)
   return Object.assign({}, company)
-}
+};
 
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state, ownProps) => {
   let company = { id: 0, name: '', ogrn: '', type: '', registrationDate: '', active: false };
   if (ownProps.company) {
     company = Object.assign({}, ownProps.company);

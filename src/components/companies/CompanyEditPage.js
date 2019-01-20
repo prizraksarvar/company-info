@@ -40,12 +40,12 @@ CompanyEditPage.propTypes = {
 
 };
 
-function getCompanyById(companies, id) {
+const getCompanyById = (companies, id) => {
   let company = companies.find(company => company.id == id)
   return Object.assign({}, company)
 }
 
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state, ownProps) => {
   let company = { id: 0, name: '', ogrn: '', type: '', registrationDate: '', active: false };
   const companyId = ownProps.match.params.id;
   if (companyId && state.companies.data.length > 0) {
